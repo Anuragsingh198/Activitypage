@@ -1,0 +1,277 @@
+You are a senior full-stack engineer.  
+Build a **cross-platform Activity Listing Page** for an online learning platform using **React.js (for web)** and **React Native (for mobile)**.  
+Both platforms should share common logic, styles, and component design principles.
+
+---
+
+## 🎯 Context
+
+This screen is part of an online learning platform for programs like AI, Machine Learning, and Cloud Computing.  
+Learners use it to find, start/continue, or review their activities such as:
+- Online Classes
+- Quizzes
+- Assignments
+- Discussions
+
+The page must work smoothly across **Web (React.js)** and **Mobile (React Native)**.
+
+---
+
+## 🧩 Core Requirements
+
+### 1️⃣ Activity Listing
+- Display a scrollable list of activities.
+- Each activity shows:
+  - Title (e.g., “Quiz on Neural Networks”)
+  - Type (Online Class / Quiz / Assignment / Discussion)
+  - Status (Not Started / In Progress / Completed)
+  - Date or Due Date
+  - Duration (for classes)
+  - Program name or week number (optional)
+  - Action Button:
+    - “Start” if not started
+    - “Continue” if in progress
+    - “Review” if completed
+
+### 2️⃣ Filters
+Add a filter bar (responsive):
+- Filter by Type (Class, Quiz, Assignment, Discussion)
+- Filter by Status (Upcoming, In Progress, Completed)
+- (Optional) Date range or Program
+- Include a **search bar** for quick lookups.
+
+### 3️⃣ Responsiveness
+- **Web version:** Responsive grid layout.
+- **Mobile version:** Scrollable single-column list.
+- Should work seamlessly on various screen sizes.
+
+### 4️⃣ UI & Theme
+- Consistent design system across web and mobile.
+- Support **Light and Dark Mode** toggle.
+- Smooth transitions and minimal load time.
+
+### 5️⃣ Mock Data / API
+Use a local JSON file (`/src/data/activities.json`) or mock API with structure:
+```json
+[
+  {
+    "id": 1,
+    "title": "Introduction to Machine Learning",
+    "type": "Online Class",
+    "status": "Completed",
+    "date": "2025-10-20",
+    "duration": "1h 30m"
+  },
+  {
+    "id": 2,
+    "title": "Quiz on Neural Networks",
+    "type": "Quiz",
+    "status": "Not Started",
+    "dueDate": "2025-10-31"
+  }
+]
+⚙️ Tech Stack
+🌐 For Web (React.js)
+Framework: React.js + Vite or CRA
+
+UI Library: MUI or Tailwind CSS + ShadCN UI
+
+State Management: Zustand or Redux Toolkit
+
+Routing: React Router DOM
+
+Theming: Context API or MUI ThemeProvider
+
+Testing: Jest + React Testing Library
+
+📱 For Mobile (React Native)
+Framework: React Native CLI (not Expo)
+
+UI Library: React Native Paper or NativeBase
+
+State Management: Zustand or Redux Toolkit (shared logic)
+
+Navigation: React Navigation
+
+Theming: React Native Paper’s Dark/Light theme
+
+Styling: Styled Components or Tailwind (via NativeWind)
+
+🧠 Shared Logic (Optional)
+Create a /shared folder to store:
+
+Type definitions / interfaces
+
+Common utility functions (filter, sort, format date)
+
+Shared Zustand store (you can import in both apps)
+
+📂 Folder Structure
+Web App (/web/)
+kotlin
+Copy code
+web/
+├── src/
+│   ├── components/
+│   │   ├── ActivityCard.jsx
+│   │   ├── FilterBar.jsx
+│   │   └── ActivityList.jsx
+│   ├── pages/
+│   │   └── ActivityPage.jsx
+│   ├── data/
+│   │   └── activities.json
+│   ├── store/
+│   │   └── activityStore.js
+│   ├── utils/
+│   │   └── filters.js
+│   └── App.jsx
+├── package.json
+└── README.md
+Mobile App (/mobile/)
+kotlin
+Copy code
+mobile/
+├── src/
+│   ├── components/
+│   │   ├── ActivityCard.js
+│   │   ├── FilterBar.js
+│   │   └── ActivityList.js
+│   ├── screens/
+│   │   └── ActivityScreen.js
+│   ├── data/
+│   │   └── activities.js
+│   ├── store/
+│   │   └── activityStore.js
+│   ├── utils/
+│   │   └── filters.js
+│   └── App.js
+├── android/
+├── ios/
+└── package.json
+💻 Functionality Details
+1. ActivityCard
+Reusable component showing:
+
+Title
+
+Type badge (color-coded)
+
+Status label
+
+Date/Due Date
+
+CTA button (Start/Continue/Review)
+
+Web: Use MUI Card component
+
+Mobile: Use React Native Paper Card
+
+2. FilterBar
+Drop-down or segmented control for filtering
+
+Search box
+
+“Clear Filters” option
+
+Connect to Zustand or Redux state
+
+3. ActivityList
+Maps filtered data → renders ActivityCard list
+
+Web: grid layout with responsive breakpoints
+
+Mobile: vertical scroll via FlatList
+
+4. Store (Zustand / Redux)
+Global state: activities, filter options, search query
+
+Derived state: filteredActivities
+
+Example:
+
+js
+Copy code
+const useActivityStore = create((set, get) => ({
+  activities: [],
+  filters: { type: "All", status: "All", search: "" },
+  setFilters: (filters) => set({ filters }),
+  filteredActivities: () => {
+    const { activities, filters } = get();
+    return activities.filter(
+      a =>
+        (filters.type === "All" || a.type === filters.type) &&
+        (filters.status === "All" || a.status === filters.status) &&
+        a.title.toLowerCase().includes(filters.search.toLowerCase())
+    );
+  }
+}));
+🧠 Dark/Light Mode
+Web: MUI or Tailwind dark mode classes.
+
+Mobile: useColorScheme() hook from React Native or Paper theme provider.
+
+🧪 Testing
+Write 1–2 simple component tests:
+
+Check that filtering works correctly.
+
+Verify “Start” / “Continue” / “Review” button appears as expected.
+
+📝 README Instructions
+Your README.md must include:
+
+Project description and architecture
+
+Setup steps for each platform:
+
+bash
+Copy code
+# For Web
+cd web
+npm install
+npm run dev
+
+# For Mobile
+cd mobile
+npm install
+npx react-native run-android
+Libraries used & reasoning
+
+Tradeoffs / limitations
+
+Future improvements (e.g., API integration, offline sync)
+
+🚀 Bonus Features (Optional)
+Sort by date or title
+
+Infinite scroll or lazy loading
+
+Activity detail modal
+
+Animated list transitions
+
+Sync progress state to localStorage/AsyncStorage
+
+Unit tests for filters and UI
+
+🎯 Deliverables
+✅ 1 GitHub repo containing two folders:
+
+/web → React.js app
+
+/mobile → React Native app
+✅ Same dataset & design across platforms
+✅ Fully functional filter + list + responsive UI
+✅ README with setup & explanation
+✅ Optional test coverage
+
+🎁 Expected Output
+Modern, clean UI similar to Coursera / Udemy activity list
+
+Fast, responsive, and consistent on both platforms
+
+Shared logic where possible
+
+Simple but elegant filtering and status handling
+
+Supports dark mode
