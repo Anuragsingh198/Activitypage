@@ -138,25 +138,18 @@ Before you start, make sure you have:
 
 ### Installation
 
-1. **Clone or download this repository**
-   ```bash
-   git clone <your-repo-url>
-   cd ActivityListings
-   ```
-
-2. **Install web app dependencies**
+ **Install web app dependencies**
 ```bash
 npm install
    ```
-
-3. **Install mobile app dependencies**
+ **Install mobile app dependencies**
    ```bash
-cd mobile
-npm install
+  cd mobile
+  npm install
    cd ..
    ```
 
-## 💻 Running the Web App
+## Running the Web App
 
 1. **Start the development server**
 ```bash
