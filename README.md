@@ -2,7 +2,7 @@
 
 A simple and fast activity listing app that helps learners find, start, and track their learning activities. Works on both web browsers and mobile phones (Android/iOS) from the same codebase.
 
-## 📦 What This App Does
+##  What This App Does
 
 - **View Activities**: See all your learning activities (classes, quizzes, assignments, discussions) in one place
 - **Search & Filter**: Quickly find activities by searching or filtering by type and status
@@ -10,7 +10,7 @@ A simple and fast activity listing app that helps learners find, start, and trac
 - **Light/Dark Mode**: Switch between light and dark themes for comfortable viewing
 - **Responsive Design**: Works great on desktop, tablet, and mobile devices
 
-## 📸 Screenshots
+## Screenshots
 
 ### Web App Screenshots
 
@@ -61,8 +61,33 @@ A simple and fast activity listing app that helps learners find, start, and trac
 </table>
 
 #### Responsive Design
+<table>
+<tr>
+<td width="50%">
 <img src="docs/screenshots/web_mobileRespinseveHome.png" alt="Web Mobile Responsive" width="400" style="max-width: 100%; display: block; margin: 0 auto;">
 <p align="center"><small>Responsive Design - Mobile View</small></p>
+</td>
+<td width="50%">
+<img src="docs/screenshots/web-mobileActivity.png" alt="Mobile Activity View" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
+<p align="center"><small>Activity Card View</small></p>
+</td>
+<td width="50%">
+<img src="docs/screenshots/web-mobile-filter1.png" alt="Web Mobile Filter 1" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
+<p align="center"><small>Web-Mobile Filter</small></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<img src="docs/screenshots/web-mobile-filet2.png" alt="Web Mobile Filter 2" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
+<p align="center"><small>Web-Mobile Filter 2</small></p>
+</td>
+<td width="50%">
+<img src="docs/screenshots/web-mobile-search.png" alt="Web Mobile Search" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
+<p align="center"><small>Web-Mobile Search</small></p>
+</td>
+</tr>
+</table>
+
 
 ### Mobile App Screenshots
 
@@ -102,31 +127,7 @@ A simple and fast activity listing app that helps learners find, start, and trac
 </tr>
 </table>
 
-#### Activity Cards & Web-Mobile Views
-<table>
-<tr>
-<td width="50%">
-<img src="docs/screenshots/web-mobileActivity.png" alt="Mobile Activity View" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
-<p align="center"><small>Activity Card View</small></p>
-</td>
-<td width="50%">
-<img src="docs/screenshots/web-mobile-filter1.png" alt="Web Mobile Filter 1" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
-<p align="center"><small>Web-Mobile Filter</small></p>
-</td>
-</tr>
-<tr>
-<td width="50%">
-<img src="docs/screenshots/web-mobile-filet2.png" alt="Web Mobile Filter 2" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
-<p align="center"><small>Web-Mobile Filter 2</small></p>
-</td>
-<td width="50%">
-<img src="docs/screenshots/web-mobile-search.png" alt="Web Mobile Search" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
-<p align="center"><small>Web-Mobile Search</small></p>
-</td>
-</tr>
-</table>
-
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -243,7 +244,7 @@ npm run ios
 
 This builds and installs the app on your iOS simulator or connected device.
 
-## 🧪 Running Tests
+## Running Tests
 
 We have basic tests to make sure everything works correctly.
 
@@ -267,7 +268,7 @@ npm run test:ui
 npm run test:coverage
 ```
 
-## 📚 Tech Choices & Why We Made Them
+## Tech Choices & Why We Made Them
 
 ### Web App (React + Vite + Tailwind)
 
@@ -310,29 +311,29 @@ npm run test:coverage
 - No bugs from having different code in two places
 - Easier to maintain and update
 
-## ⚖️ Tradeoffs We Made
+## Tradeoffs We Made
 
 ### 1. Separate UI Components (Web vs Mobile)
 
 **What we did:** Web uses React components, mobile uses React Native components
 
 **Why:** 
-- ✅ Better performance (native components are faster)
-- ✅ Better user experience (follows platform conventions)
-- ❌ Can't reuse UI components between platforms
+- Better performance (native components are faster)
+- Better user experience (follows platform conventions)
+- Can't reuse UI components between platforms
 
 **Alternative considered:** React Native Web (one codebase)
-- ❌ More complex setup
-- ❌ Some features don't work well on web
+- More complex setup
+- Some features don't work well on web
 
 ### 2. Mock Data Instead of Real API
 
 **What we did:** Use local mock data files
 
 **Why:**
-- ✅ Works immediately without backend setup
-- ✅ Easy to test and develop
-- ❌ No real data persistence
+- Works immediately without backend setup
+- Easy to test and develop
+- No real data persistence
 
 **Future:** Easy to replace with API calls using React Query
 
@@ -341,13 +342,13 @@ npm run test:coverage
 **What we did:** All data is in memory (lost on refresh)
 
 **Why:**
-- ✅ Simple to get started
-- ✅ No database setup needed
-- ❌ Data doesn't persist
+- Simple to get started
+- No database setup needed
+- Data doesn't persist
 
 **Future:** Can add database easily (we have Drizzle ORM ready)
 
-## 🚧 Known Limitations
+## Known Limitations
 
 1. **No Data Persistence**: Activities reset when you refresh the page. In a real app, this would connect to a backend API.
 
@@ -359,7 +360,7 @@ npm run test:coverage
 
 5. **No User Accounts**: Everyone sees the same activities. In production, you'd have user login and personal data.
 
-## ✨ What Can Be Done Next
+## What Can Be Done Next
 
 ### Short Term (Easy Wins)
 
@@ -424,24 +425,24 @@ npm run test:coverage
 All screenshots are located in the `docs/screenshots/` folder and displayed above. The screenshots showcase:
 
 ### Web App Features
-- ✅ Home page in light and dark modes
-- ✅ Activity listing page
-- ✅ Activity detail page with full description
-- ✅ Filter functionality (type and status)
-- ✅ Search functionality
-- ✅ Responsive design for mobile devices
+- Home page in light and dark modes
+- Activity listing page
+- Activity detail page with full description
+- Filter functionality (type and status)
+- Search functionality
+- Responsive design for mobile devices
 
 ### Mobile App Features
-- ✅ Home page with activity list
-- ✅ Dark mode support
-- ✅ Activity detail view
-- ✅ Filter modals (type and status selection)
-- ✅ Search functionality
-- ✅ Activity card views
+- Home page with activity list
+- Dark mode support
+- Activity detail view
+- Filter modals (type and status selection)
+- Search functionality
+- Activity card views
 
 All screenshots demonstrate the app's key features including light/dark mode support, filtering, searching, and responsive design across both web and mobile platforms.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ActivityListings/
@@ -465,7 +466,7 @@ ActivityListings/
 └── README.md                  # This file
 ```
 
-## 📝 Code Examples
+## Code Examples
 
 ### Adding a New Activity Type
 
@@ -484,28 +485,4 @@ export type ActivityType = "Online Class" | "Quiz" | "Assignment" | "Discussion"
 2. Add filter UI in `ActivityFilters.tsx`
 3. Update the selector logic to handle the new filter
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Run tests (`npm test`)
-5. Commit your changes (`git commit -m 'Add amazing feature'`)
-6. Push to the branch (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 🙏 Acknowledgments
-
-- Built with React, React Native, and Expo
-- UI components from shadcn/ui
-- Icons from Lucide React
-
 ---
-
-**Made with ❤️ for learners everywhere**
-
-If you have questions or need help, please open an issue on GitHub!
