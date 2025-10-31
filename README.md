@@ -166,7 +166,7 @@ npm install
    - Click any activity card to see details
    - Click the moon/sun icon to toggle dark mode
 
-## 📱 Running the Mobile App
+## Running the Mobile App
 
 ### Option 1: Using Expo Go (Easiest - No Setup Required)
 
@@ -209,7 +209,7 @@ npm install
    ```
    - This will automatically open the app in the iOS simulator
 
-## 🏗️ Building for Production
+## Building for Production
 
 ### Build Web App
 
@@ -381,7 +381,7 @@ npm run test:coverage
 - **Share Activities**: Share activity links with other learners
 - **Analytics Dashboard**: See your learning stats and progress over time
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Web App Issues
 
@@ -413,7 +413,7 @@ npm run test:coverage
 **Problem:** Tests won't run
 - **Solution:** Make sure all dependencies are installed: `npm install`. Check that `vitest.config.ts` exists in the root folder.
 
-## 📸 Screenshots Included
+## Screenshots Included
 
 All screenshots are located in the `docs/screenshots/` folder and displayed above. The screenshots showcase:
 
