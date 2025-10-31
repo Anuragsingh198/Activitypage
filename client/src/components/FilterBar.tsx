@@ -1,8 +1,9 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search, X, Video, ClipboardCheck, FileText, MessageSquare } from "lucide-react";
-import { ActivityType, ActivityStatus } from "@shared/schema";
-import { useActivityStore } from "@/lib/activity-store";
+import { ActivityType, ActivityStatus } from "@/types/activity";
+import { useDispatch, useSelector } from "react-redux";
+import { clearFilters, selectFilters, setFilters } from "@/store/slices/activitiesSlice";
 
 const typeOptions: ({ value: ActivityType | "All"; label: string; icon?: any })[] = [
   { value: "All", label: "All Types" },
@@ -20,7 +21,8 @@ const statusOptions: ({ value: ActivityStatus | "All"; label: string })[] = [
 ];
 
 export function FilterBar() {
-  const { filters, setFilters, clearFilters } = useActivityStore();
+  const dispatch = useDispatch();
+  const filters = useSelector(selectFilters);
 
   const hasActiveFilters = 
     filters.type !== "All" || 
@@ -28,16 +30,16 @@ export function FilterBar() {
     filters.search !== "";
 
   return (
-    <div className="sticky top-0 z-10 bg-background border-b p-6 space-y-4">
+    <div className="sticky top-0 z-10 bg-white dark:bg-card border-b p-6 space-y-4">
       <div className="flex items-center gap-3 flex-wrap">
         <div className="relative flex-1 min-w-[200px]">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             type="search"
             placeholder="Search activities..."
-            className="pl-10"
+            className="pl-10 bg-white dark:bg-card"
             value={filters.search}
-            onChange={(e) => setFilters({ search: e.target.value })}
+            onChange={(e) => dispatch(setFilters({ search: e.target.value }))}
             data-testid="input-search"
           />
         </div>
@@ -45,7 +47,7 @@ export function FilterBar() {
         {hasActiveFilters && (
           <Button
             variant="ghost"
-            onClick={clearFilters}
+            onClick={() => dispatch(clearFilters())}
             data-testid="button-clear-filters"
           >
             <X className="h-4 w-4 mr-2" />
@@ -65,8 +67,8 @@ export function FilterBar() {
             <Button
               key={option.value}
               variant={isActive ? "default" : "outline"}
-              size="sm"
-              onClick={() => setFilters({ type: option.value })}
+
+              onClick={() => dispatch(setFilters({ type: option.value }))}
               className="rounded-full"
               data-testid={`button-filter-type-${option.value.toLowerCase().replace(" ", "-")}`}
             >
@@ -87,8 +89,7 @@ export function FilterBar() {
             <Button
               key={option.value}
               variant={isActive ? "default" : "outline"}
-              size="sm"
-              onClick={() => setFilters({ status: option.value })}
+              onClick={() => dispatch(setFilters({ status: option.value }))}
               className="rounded-full"
               data-testid={`button-filter-status-${option.value.toLowerCase().replace(" ", "-")}`}
             >
