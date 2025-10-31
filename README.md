@@ -46,11 +46,11 @@ A simple and fast activity listing app that helps learners find, start, and trac
 <table>
 <tr>
 <td width="33%">
-<img src="docs/screenshots/web-filter1.png" alt="Web Filters 1" width="100%">
+<img src="docs/screenshots/web_filter1.png" alt="Web Filters 1" width="100%">
 <p align="center"><small>Filter - Type</small></p>
 </td>
 <td width="33%">
-<img src="docs/screenshots/web-filter2.png" alt="Web Filters 2" width="100%">
+<img src="docs/screenshots/web_filter2.png" alt="Web Filters 2" width="100%">
 <p align="center"><small>Filter - Status</small></p>
 </td>
 <td width="33%">
@@ -63,25 +63,25 @@ A simple and fast activity listing app that helps learners find, start, and trac
 #### Responsive Design
 <table>
 <tr>
-<td width="50%">
+<td width="33%">
 <img src="docs/screenshots/web_mobileRespinseveHome.png" alt="Web Mobile Responsive" width="400" style="max-width: 100%; display: block; margin: 0 auto;">
 <p align="center"><small>Responsive Design - Mobile View</small></p>
 </td>
-<td width="50%">
+<td width="33%">
 <img src="docs/screenshots/web-mobileActivity.png" alt="Mobile Activity View" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
 <p align="center"><small>Activity Card View</small></p>
 </td>
-<td width="50%">
+<td width="33%">
 <img src="docs/screenshots/web-mobile-filter1.png" alt="Web Mobile Filter 1" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
 <p align="center"><small>Web-Mobile Filter</small></p>
 </td>
 </tr>
 <tr>
-<td width="50%">
+<td width="33%">
 <img src="docs/screenshots/web-mobile-filet2.png" alt="Web Mobile Filter 2" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
 <p align="center"><small>Web-Mobile Filter 2</small></p>
 </td>
-<td width="50%">
+<td width="33%">
 <img src="docs/screenshots/web-mobile-search.png" alt="Web Mobile Search" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
 <p align="center"><small>Web-Mobile Search</small></p>
 </td>
