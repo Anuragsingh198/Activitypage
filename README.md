@@ -15,59 +15,116 @@ A simple and fast activity listing app that helps learners find, start, and trac
 ### Web App Screenshots
 
 #### Home Page
-![Web Home - Light Mode](docs/screenshots/web-home-light.png)
-*Home page in light mode*
+<table>
+<tr>
+<td width="50%">
+<img src="docs/screenshots/web-home-light.png" alt="Web Home - Light Mode" width="100%">
+<p align="center"><small>Home page - Light Mode</small></p>
+</td>
+<td width="50%">
+<img src="docs/screenshots/web-home-dark.png" alt="Web Home - Dark Mode" width="100%">
+<p align="center"><small>Home page - Dark Mode</small></p>
+</td>
+</tr>
+</table>
 
-![Web Home - Dark Mode](docs/screenshots/web-home-dark.png)
-*Home page in dark mode*
-
-#### Activity Listing Page
-![Web Activities - Dark Mode](docs/screenshots/web-activities-dark.png)
-*Activity listing page in dark mode*
-
-#### Activity Detail Page
-![Web Activity Description](docs/screenshots/web-activity-description.png)
-*Activity detail page showing full description*
+#### Activity Listing & Detail
+<table>
+<tr>
+<td width="50%">
+<img src="docs/screenshots/web-activities-dark.png" alt="Web Activities" width="100%">
+<p align="center"><small>Activity Listing Page</small></p>
+</td>
+<td width="50%">
+<img src="docs/screenshots/web-activity-description.png" alt="Web Activity Description" width="100%">
+<p align="center"><small>Activity Detail Page</small></p>
+</td>
+</tr>
+</table>
 
 #### Filters & Search
-![Web Filters](docs/screenshots/web-filter1.png)
-*Filter options - Type selection*
-
-![Web Filters 2](docs/screenshots/web-filter2.png)
-*Filter options - Status selection*
-
-![Web Search](docs/screenshots/web-search.png)
-*Search functionality*
+<table>
+<tr>
+<td width="33%">
+<img src="docs/screenshots/web-filter1.png" alt="Web Filters 1" width="100%">
+<p align="center"><small>Filter - Type</small></p>
+</td>
+<td width="33%">
+<img src="docs/screenshots/web-filter2.png" alt="Web Filters 2" width="100%">
+<p align="center"><small>Filter - Status</small></p>
+</td>
+<td width="33%">
+<img src="docs/screenshots/web-search.png" alt="Web Search" width="100%">
+<p align="center"><small>Search Functionality</small></p>
+</td>
+</tr>
+</table>
 
 #### Responsive Design
-![Web Mobile Responsive Home](docs/screenshots/web_mobileRespinseveHome.png)
-*Responsive design showing mobile view*
+<img src="docs/screenshots/web_mobileRespinseveHome.png" alt="Web Mobile Responsive" width="400" style="max-width: 100%; display: block; margin: 0 auto;">
+<p align="center"><small>Responsive Design - Mobile View</small></p>
 
 ### Mobile App Screenshots
 
-#### Home / Activity List
-![Mobile Home Page](docs/screenshots/mobile-home_page.png)
-*Mobile home page with activity list*
-
-![Mobile Dark Mode](docs/screenshots/mobileDark.png)
-*Mobile app in dark mode*
+#### Home & Activity List
+<table>
+<tr>
+<td width="50%">
+<img src="docs/screenshots/mobile-home_page.png" alt="Mobile Home" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
+<p align="center"><small>Home Page</small></p>
+</td>
+<td width="50%">
+<img src="docs/screenshots/mobileDark.png" alt="Mobile Dark Mode" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
+<p align="center"><small>Dark Mode</small></p>
+</td>
+</tr>
+</table>
 
 #### Activity Detail
-![Mobile Dark Description](docs/screenshots/mobileDarkDescription.png)
-*Activity detail view in dark mode*
+<img src="docs/screenshots/mobileDarkDescription.png" alt="Mobile Dark Description" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
+<p align="center"><small>Activity Detail - Dark Mode</small></p>
 
 #### Filters & Search
-![Mobile Filter 1](docs/screenshots/mobile_filter1.png)
-*Mobile filter modal - Type selection*
+<table>
+<tr>
+<td width="33%">
+<img src="docs/screenshots/mobile_filter1.png" alt="Mobile Filter 1" width="180" style="max-width: 100%; display: block; margin: 0 auto;">
+<p align="center"><small>Filter Modal - Type</small></p>
+</td>
+<td width="33%">
+<img src="docs/screenshots/mobile_filter2.png" alt="Mobile Filter 2" width="180" style="max-width: 100%; display: block; margin: 0 auto;">
+<p align="center"><small>Filter Modal - Status</small></p>
+</td>
+<td width="33%">
+<img src="docs/screenshots/web-mobile-search.png" alt="Mobile Search" width="180" style="max-width: 100%; display: block; margin: 0 auto;">
+<p align="center"><small>Search Modal</small></p>
+</td>
+</tr>
+</table>
 
-![Mobile Filter 2](docs/screenshots/mobile_filter2.png)
-*Mobile filter modal - Status selection*
-
-![Mobile Search](docs/screenshots/web-mobile-search.png)
-*Mobile search functionality*
-
-![Mobile Activity View](docs/screenshots/web-mobileActivity.png)
-*Mobile activity card view*
+#### Activity Cards & Web-Mobile Views
+<table>
+<tr>
+<td width="50%">
+<img src="docs/screenshots/web-mobileActivity.png" alt="Mobile Activity View" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
+<p align="center"><small>Activity Card View</small></p>
+</td>
+<td width="50%">
+<img src="docs/screenshots/web-mobile-filter1.png" alt="Web Mobile Filter 1" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
+<p align="center"><small>Web-Mobile Filter</small></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<img src="docs/screenshots/web-mobile-filet2.png" alt="Web Mobile Filter 2" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
+<p align="center"><small>Web-Mobile Filter 2</small></p>
+</td>
+<td width="50%">
+<img src="docs/screenshots/web-mobile-search.png" alt="Web Mobile Search" width="200" style="max-width: 100%; display: block; margin: 0 auto;">
+<p align="center"><small>Web-Mobile Search</small></p>
+</td>
+</tr>
+</table>
 
 ## 🚀 Quick Start
 
@@ -101,7 +158,7 @@ npm install
 ## 💻 Running the Web App
 
 1. **Start the development server**
-   ```bash
+```bash
    npm run dev
    ```
 
