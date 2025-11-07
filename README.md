@@ -217,7 +217,7 @@ npm install
 npm run build
 ```
 
-This creates optimized files in the `dist/public` folder that you can deploy to any web server.
+This creates optimized files in the `dist` folder that you can deploy to any web server.
 
 ### Build Mobile App (Android)
 
@@ -239,27 +239,7 @@ This builds and installs the app on your iOS simulator or connected device.
 
 ## Running Tests
 
-We have basic tests to make sure everything works correctly.
-
-### Run All Tests
-```bash
-npm test
-```
-
-### Run Tests in Watch Mode (Auto-rerun on changes)
-```bash
-npm test -- --watch
-```
-
-### Run Tests with UI Dashboard
-```bash
-npm run test:ui
-```
-
-### Check Test Coverage
-```bash
-npm run test:coverage
-```
+Tests are currently disabled/removed in this JS-only setup.
 
 ## Tech Choices & Why We Made Them
 
@@ -328,7 +308,7 @@ npm run test:coverage
 - Easy to test and develop
 - No real data persistence
 
-**Future:** Easy to replace with API calls using React Query
+**Future:** Easy to replace with API calls (you can add React Query later)
 
 ### 3. No Database
 
@@ -389,7 +369,7 @@ npm run test:coverage
 - **Solution:** Make sure Node.js 18+ is installed. Try deleting `node_modules` and running `npm install` again.
 
 **Problem:** Port already in use
-- **Solution:** Change the port in `vite.config.ts` or kill the process using port 5173.
+- **Solution:** Change the port in `vite.config.js` or kill the process using port 5173.
 
 **Problem:** Styles look broken
 - **Solution:** Make sure Tailwind CSS is configured correctly. Try `npm run build` to check for errors.
@@ -410,8 +390,7 @@ npm run test:coverage
 
 ### Test Issues
 
-**Problem:** Tests won't run
-- **Solution:** Make sure all dependencies are installed: `npm install`. Check that `vitest.config.ts` exists in the root folder.
+Tests are not configured in this JS-only setup.
 
 ## Screenshots Included
 
@@ -444,14 +423,14 @@ ActivityListings/
 │   │   ├── components/       # React components
 │   │   ├── pages/            # Page components
 │   │   ├── store/            # Redux state (shared with mobile)
-│   │   ├── types/            # TypeScript types (shared)
+│   │   ├── types/            # JSDoc-typed models for JS
 │   │   └── data/             # Mock data
 │   └── index.html
 │
 ├── mobile/                    # Mobile app (React Native)
 │   ├── components/           # React Native components
-│   ├── App.tsx
-│   └── theme.ts              # Mobile theme
+│   ├── App.jsx
+│   └── theme.js              # Mobile theme
 │
 ├── shared/                    # Shared code
 │   └── types/                # Shared types
@@ -463,19 +442,19 @@ ActivityListings/
 
 ### Adding a New Activity Type
 
-1. Update `client/src/types/activity.ts`:
-```typescript
-export type ActivityType = "Online Class" | "Quiz" | "Assignment" | "Discussion" | "Workshop";
+1. Update `client/src/types/activity.js` JSDoc typedef:
+```js
+/** @typedef {"Online Class" | "Quiz" | "Assignment" | "Discussion" | "Workshop"} ActivityType */
 ```
 
-2. Add filter option in `client/src/components/ActivityFilters.tsx`
+2. Add filter option in `client/src/components/ActivityFilters.jsx`
 
 3. Update mobile filter in `mobile/components/Filters.tsx`
 
 ### Adding a New Filter
 
-1. Update the filter type in `client/src/store/slices/activitiesSlice.ts`
-2. Add filter UI in `ActivityFilters.tsx`
+1. Update the filter shape in `client/src/store/slices/activitiesSlice.js`
+2. Add filter UI in `ActivityFilters.jsx`
 3. Update the selector logic to handle the new filter
 
 ---
